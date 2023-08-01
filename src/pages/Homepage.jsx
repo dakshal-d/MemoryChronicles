@@ -4,9 +4,10 @@ import Memoir from '../assets/Memoir.png'
 
 export default function Homepage() {
   return (
-    <div className="bg-white">
+    <div className="bg-white ">
       <div className=" text-pink-500 font-bold text-lg p-3 py-4">
       "Discover Your Story, Unfold Your Memories"
+      
       </div>
 
       {/* <div className="md:text-3xl sm:text-3xl text-3xl font-bold justify-center text-gray-800">
@@ -23,9 +24,11 @@ export default function Homepage() {
         />
       </div> */}
 
-      <div className="mx-auto max-w-7xl py-12 sm:px-6 sm:py-12 lg:px-8">
+      <div className="mx-auto max-w-7xl py-12 sm:px-6 sm:py-12 lg:px-8 ">
+        
 
         <div className="relative isolate overflow-hidden bg-white px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+          
           <svg
             viewBox="0 0 1024 1024"
             className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
@@ -65,7 +68,7 @@ export default function Homepage() {
             <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
               <a
                 href="/notes"
-                className="rounded-md bg-pink-200 px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                className="animate-bounce rounded-md bg-pink-200 px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-pink-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Get started
               </a>

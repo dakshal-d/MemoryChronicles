@@ -83,3 +83,130 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
+
+
+// import React, { useState, useEffect, useRef } from 'react';
+// import CountUp from 'countup';
+// import 'material-design-icons-iconfont';
+
+// const Card = () => {
+//   const [cardOpen, setCardOpen] = useState(false);
+//   const cardRef = useRef(null);
+//   const totalRef = useRef(null);
+//   const deviceRefs = useRef([]);
+
+//   const cardData = () => ({
+//     countUp: (target, startVal, endVal, decimals, duration) => {
+//       const countUp = new CountUp(target, startVal || 0, endVal, decimals || 0, duration || 2, {
+//         prefix: '$',
+//       });
+//       countUp.start();
+//     },
+//     sessions: [
+//       {
+//         label: 'Phone',
+//         size: 60,
+//         c: 25705,
+//         color: 'green-500',
+//       },
+//       {
+//         label: 'Tablet',
+//         size: 30,
+//         c: 12852,
+//         color: 'green-400',
+//       },
+//       {
+//         label: 'Desktop',
+//         size: 8,
+//         c: 3427,
+//         color: 'green-300',
+//       },
+//       {
+//         label: 'Other',
+//         size: 2,
+//         c: 856,
+//         color: 'green-200',
+//       },
+//     ],
+//   });
+
+//   useEffect(() => {
+//     if (cardOpen) {
+//       cardData().countUp(totalRef.current, 0, 42842, null, 2);
+//       cardData().sessions.forEach((el, i) =>
+//         cardData().countUp(deviceRefs.current[i], 0, cardData().sessions[i].c, null, 1.6)
+//       );
+//     }
+//   }, [cardOpen]);
+
+//   useEffect(() => {
+//     setTimeout(() => {
+//       setCardOpen(true);
+//     }, 100);
+//   }, []);
+
+//   return (
+//     <div className="min-w-screen bg-white h-screen flex items-center justify-center px-4 py-4">
+//       <div className="bg-slate-50 text-black-500 rounded shadow-xl py-5 px-5 w-full sm:w-2/3 md:w-1/2 lg:w-2/3">
+//         <div className="flex w-full">
+//           <h3 className="text-lg font-semibold leading-tight flex-1">TOTAL INCOME</h3>
+//           <div className="relative h-5 leading-none">
+//             <button
+//               className="text-xl text-gray-900 hover:text-gray-500 h-6 focus:outline-none"
+//               onClick={() => setCardOpen((prev) => !prev)}
+//             >
+//               <i
+//                 className={`mdi mdi-chevron-${cardOpen ? 'up' : 'down'}`}
+//                 style={{ lineHeight: '0' }}
+//               />
+//             </button>
+//           </div>
+//         </div>
+//         <div
+//           className="relative overflow-hidden transition-all duration-500"
+//           ref={cardRef}
+//           style={{ maxHeight: cardOpen ? `${cardRef.current.scrollHeight}px` : '0', opacity: cardOpen ? 1 : 0 }}
+//         >
+//           <div>
+//             <div className="pb-4 lg:pb-6">
+//               <h4 className="text-2xl lg:text-3xl text-black font-semibold leading-tight inline-block" ref={totalRef}>
+//                 0
+//               </h4>
+//             </div>
+//             <div className="pb-4 lg:pb-6">
+//               <div className={`overflow-hidden rounded-full h-3 bg-slate-50 flex transition-all duration-500 ${cardOpen ? 'w-full' : 'w-0'}`}>
+//                 {cardData().sessions.map((item, index) => (
+//                   <div
+//                     key={index}
+//                     className={`h-full bg-${item.color}`}
+//                     style={{ width: `${item.size}%` }}
+//                   />
+//                 ))}
+//               </div>
+//             </div>
+//             <div className="flex -mx-4">
+//               {cardData().sessions.map((item, index) => (
+//                 <div
+//                   key={index}
+//                   className={`w-1/3 px-4 ${index !== 0 ? 'border-l border-gray-700' : ''}`}
+//                 >
+//                   <div className="text-sm">
+//                     <span
+//                       className={`inline-block w-2 h-2 rounded-full mr-1 align-middle bg-${item.color}`}
+//                     />
+//                     <span className="align-middle text-gray-500">{item.label}</span>
+//                   </div>
+//                   <div className="font-medium text-lg text-black" ref={(ref) => (deviceRefs.current[index] = ref)}>
+//                     0
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Card;

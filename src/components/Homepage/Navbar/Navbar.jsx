@@ -19,14 +19,12 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-
-
 export default function Navbar() {
   const dispatch = useDispatch()
   const handleLogout = () => {
     dispatch({ type: LOGOUT });
   };
-  const { auth} = useSelector((state) => state.userReducer)
+  const {auth} = useSelector((state) => state.userReducer)
   console.log(auth)
   return (
     <Disclosure as="nav" className="bg-gray-800 text-pink-400">
@@ -75,7 +73,7 @@ export default function Navbar() {
 
 
                 {/* Profile dropdown */}
-                <Menu as="div" className="relative ml-3">
+                {(auth) && (<Menu as="div" className="relative ml-3 animate-pulse">
                   <div>
                     <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open user menu</span>
@@ -110,7 +108,7 @@ export default function Navbar() {
                       </Menu.Item>
                     </Menu.Items>
                   </Transition>
-                </Menu>
+                </Menu>)}
               </div>
             </div>
           </div>
