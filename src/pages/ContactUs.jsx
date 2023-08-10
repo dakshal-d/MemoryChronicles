@@ -2,15 +2,16 @@ import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
 // require("dotenv").config();
 
 const ContactUs = () => {
-    const form = useRef();
+  const form = useRef();
 
-    const sendEmail = (e) => {
-        e.preventDefault();
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-        emailjs.sendForm('service_m2uv4y3', 'template_rbddve5', form.current, 'pU2Br9ZpJz-XjRLTv')
+    emailjs.sendForm('service_m2uv4y3', 'template_rbddve5', form.current, 'pU2Br9ZpJz-XjRLTv')
       .then((result) => {
         console.log(result.text);
         toast.success('Message sent successfully');
@@ -22,8 +23,23 @@ const ContactUs = () => {
   };
 
   return (
+    
+
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="max-w-md w-full p-6 rounded-lg shadow-lg bg-white">
+      
+
+
+      <div className="max-w-md w-full p-6 rounded-lg shadow-lg bg-white mt-4 py-4">
+        <div className="max-w-md w-full p-6 mt-4">
+          <Player
+            autoplay
+            loop
+            src="https://lottie.host/8ba3374f-5db4-4e48-bd26-a3af174fdddc/Un4mCe9hir.json"
+            className="h-200"
+          >
+            <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
+          </Player>
+        </div>
         <h2 className="text-3xl font-bold mb-6 text-center text-purple-700">Contact us</h2>
         <p className="text-gray-800 mb-6 text-center">
           We're here to help. Whether you have a question about our information or services,
@@ -31,15 +47,7 @@ const ContactUs = () => {
           of the following methods:
         </p>
         <div className="py-2">
-          <div className="text-center py-1">
-            <p className="text-gray-800 text-center">Surat, Gujarat</p>
-          </div>
-          <div className="text-center py-1">
-            <p className="text-gray-800 text-center">+91 1234567890</p>
-          </div>
-          <div className="text-center py-1">
-            <p className="text-gray-800">atoz1to9@gmail.com</p>
-          </div>
+
         </div>
 
         <form ref={form} onSubmit={sendEmail} className="mb-6">

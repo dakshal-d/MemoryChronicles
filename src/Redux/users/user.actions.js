@@ -25,11 +25,4 @@ export const getUser=(obj)=>async(distpatch)=>{
         distpatch({type:LOGIN_USER_ERROR})
 
     }
-
-   
-
-
-
-
-
 }

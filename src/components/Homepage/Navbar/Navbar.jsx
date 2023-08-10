@@ -11,8 +11,9 @@ const navigation = [
   { name: 'MemoryChronicles', href: '/', current: true },
   { name: 'MemoirLane', href: '/notes', current: false },
   { name: 'ContactUs', href: '/contactus', current: false },
-  { name: 'Register', href: '/register', current: false },
   { name: 'Login', href: '/login', current: false },
+  { name: 'Register', href: '/register', current: false },
+
 ]
 
 function classNames(...classes) {
