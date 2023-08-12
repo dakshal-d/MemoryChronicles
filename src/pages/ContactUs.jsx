@@ -25,7 +25,7 @@ const ContactUs = () => {
   return (
     
 
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+    <div className="min-h-screen bg-bkg text-content flex items-center justify-center">
       
 
 

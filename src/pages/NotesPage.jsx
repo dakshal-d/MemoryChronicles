@@ -30,7 +30,7 @@ export default function NotesPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-bkg text-content">
       <header className="py-4 bg-white shadow">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl font-semibold text-gray-800">Your Daily Diary</h1>

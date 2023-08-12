@@ -20,7 +20,7 @@ export default function LoginPage() {
   }
 
 
-  return <section className="bg-white min-h-screen flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0">
+  return <section className="bg-bkg text-content min-h-screen flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0">
 
 <div className="animate-pulse absolute top-34 -left-4  md:w-[800px] h-[700px] bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 "></div>
       <div className="animate-pulse absolute bottom-4 right-0 md:w-[800px] h-[700px] bg-indigo-300 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>

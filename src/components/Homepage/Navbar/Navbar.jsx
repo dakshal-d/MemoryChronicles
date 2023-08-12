@@ -28,7 +28,7 @@ export default function Navbar() {
   const {auth} = useSelector((state) => state.userReducer)
   console.log(auth)
   return (
-    <Disclosure as="nav" className="bg-gray-800 text-pink-400">
+    <Disclosure as="nav" className="bg-black text-pink-400">
       {({ open }) => (
         <>
           <div className="mx-auto  max-w-7xl px-2 sm:px-6 lg:px-8 ">
