@@ -65,7 +65,7 @@ export default function LoginPage() {
             <input className="mr-1" type="checkbox" />
             <span className="text-white">Remember Me</span>
           </label>
-          <a className="text-blue-300 hover:text-blue-100 hover:underline-offset-4" href="#">Forgot Password?</a>
+          <a className="text-blue-300 hover:text-blue-100 hover:underline-offset-4" href="/register">Forgot Password?</a>
         </div>
         <div className="text-center md:text-left">
           <button className="mt-4 bg-purple-600 hover:bg-blue-700 px-4 py-2 text-white uppercase rounded text-xs tracking-wider" type="submit" onClick={handleLogin}>Login</button>

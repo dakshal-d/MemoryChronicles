@@ -3,18 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import NoteCard from "../components/Notespage/NoteCard/NoteCard";
 import { createNotes, getNotes } from "../Redux/notes/note.actions";
 import { BsPlusLg } from "react-icons/bs";
-import { ToastContainer,toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
 
 export default function NotesPage() {
-
-  
+ 
   const dispatch = useDispatch();
-  const { auth, token} = useSelector((state) => state.userReducer)
-  if (auth) {
-    toast.success('LoggedIn Successfully')
-    
-  }
   const {data } = useSelector((state) => state.noteReducer);
   const [notes, setNotes] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
