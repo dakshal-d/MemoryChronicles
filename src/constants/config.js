@@ -1,1 +1,1 @@
-export const BASE_URL = "https://memory-chronicles-backend-ikdq.vercel.app/"
+export const BASE_URL = "https://dark-erin-angelfish-kit.cyclic.cloud/"
