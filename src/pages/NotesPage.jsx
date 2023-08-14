@@ -3,9 +3,18 @@ import { useDispatch, useSelector } from "react-redux";
 import NoteCard from "../components/Notespage/NoteCard/NoteCard";
 import { createNotes, getNotes } from "../Redux/notes/note.actions";
 import { BsPlusLg } from "react-icons/bs";
+import { ToastContainer,toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function NotesPage() {
+
+  
   const dispatch = useDispatch();
+  const { auth, token} = useSelector((state) => state.userReducer)
+  if (auth) {
+    toast.success('LoggedIn Successfully')
+    
+  }
   const {data } = useSelector((state) => state.noteReducer);
   const [notes, setNotes] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -15,20 +24,24 @@ export default function NotesPage() {
   const[day,setDay]=useState("");
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
+  
 
   useEffect(() => {
     dispatch(getNotes());
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     setNotes(data);
   }, [data]);
 
   const createNote = () => {
-    dispatch(createNotes({ day,title, body }));
+    dispatch(createNotes({ day, title, body }));
     setIsOpen(false);
+    // Clear input fields after creating a note
+    setDay("");
+    setTitle("");
+    setBody("");
   };
-
   return (
     <div className="min-h-screen bg-bkg text-content">
       <header className="py-4 bg-white shadow">
@@ -110,6 +123,9 @@ export default function NotesPage() {
           </div>
         )}
       </>
+      
+      
+      
     </div>
   );
 }

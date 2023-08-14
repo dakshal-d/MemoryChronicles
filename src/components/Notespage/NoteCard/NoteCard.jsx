@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { deleteNotes, updateNotes } from "../../../Redux/notes/note.actions";
-import { useRef, useState } from "react";
+import {useState } from "react";
 
 export default function NoteCard({ day,title, body, user, _id }) {
   const dispatch = useDispatch();

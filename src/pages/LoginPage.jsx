@@ -3,9 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getUser } from "../Redux/users/user.actions";
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
+
+
 export default function LoginPage() {
   const nav = useNavigate()
-  const { auth, token, loading, error } = useSelector((state) => state.userReducer)
+  const { auth, token} = useSelector((state) => state.userReducer)
   console.log(auth, token)
   if (auth) {
     nav("/notes")
@@ -75,10 +77,6 @@ export default function LoginPage() {
       </div>
 
     </div>
-
-
   </section>
-
-
 
 }

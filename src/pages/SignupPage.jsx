@@ -1,29 +1,47 @@
 import axios from "axios";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "../constants/config";
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
+import { ToastContainer,toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function SignupPage() {
-  const nav = useNavigate();
+  // const nav = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
-
+  
+  const isEmailValid = (email) => {
+    // Email validation regex pattern
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  };
+  
   const handleSignup = async () => {
+    if (!isEmailValid(email)) {
+      toast.error('Invalid email address');
+      // alert("Invalid email address format");
+      return;
+    }
+  
     let data = await axios.post(BASE_URL + "/user/register", {
       name,
       email,
       password,
     });
+  
     let { message, status } = data.data;
     if (status === 1) {
-      alert(message);
-      nav("/login");
+      toast.success(message);
+      setName("");
+      setEmail("");
+      setPassword("");
     } else {
-      alert(message);
+      toast.error(message);
     }
   };
+  
 
   return (
     <section className="bg-bkg text-content min-h-screen flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0">
@@ -59,7 +77,6 @@ export default function SignupPage() {
             <label className="mr-1 font-semibold text-white">SignUp / Register</label>
           </div>
           <div className="my-5 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
-
           </div>
           <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded" value={name} type="text" placeholder="Name" onChange={(e) => setName(e.target.value)} />
           <input className="mt-4 text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded" value={email} type="text" placeholder="Email Address" onChange={(e) => setEmail(e.target.value)} />
@@ -75,6 +92,7 @@ export default function SignupPage() {
           </div>
         </div>
       </div>
+      <ToastContainer/>
     </section>
   );
 }
