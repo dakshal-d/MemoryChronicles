@@ -5,7 +5,7 @@ import Memoir from '../assets/Design (1).png'
 export default function Homepage() {
   return (
     <div className="bg-bkg text-content ">
-      <div className=" text-pink-500 font-bold text-lg mt-4">
+      <div className=" text-pink-500 font-bold text-lg pt-4">
         "Discover Your Story, Unfold Your Memories"
 
       </div>
