@@ -9,7 +9,7 @@ export default function Homepage() {
         "Discover Your Story, Unfold Your Memories"
 
       </div>
-      <div className="mx-auto max-w-7xl py-12 sm:px-6 sm:py-12 lg:px-8 ">
+      <div className="mx-auto max-w-7xl mt-0 sm:px-6 sm:py-4 lg:px-8 ">
         <div className="relative isolate overflow-hidden bg-white px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
 
           <svg
@@ -39,12 +39,12 @@ export default function Homepage() {
             </div>
           </div>
           <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="isolate text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Unveiling Memories.
               <br />
               one day at a time.
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-900">
+            <p className="isolate mt-6 text-lg leading-8 text-gray-900">
               {/* Unleash your creativity and stay organized effortlessly with our intuitive<span className='font-semibold text-pink-600'> MemoryChronicles</span> - your digital companion for <span className='font-semibold text-pink-600'> Capture, Relive, Edit, and Erase the chapters of your life's story."</span> */}
               "Unleash the Art of Remembering: Experience<span className='font-semibold text-pink-600'> MemoryChronicles</span> - Your Intuitive Digital Companion for <span className='font-semibold text-pink-600'>Capturing, Reliving, Editing, and Erasing </span>the Beautiful Chapters of Your Life's Extraordinary Journey."
             </p>

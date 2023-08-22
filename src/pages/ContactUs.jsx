@@ -23,13 +23,16 @@ const ContactUs = () => {
   };
 
   return (
-    
-
-    <div className="min-h-screen bg-bkg text-content flex items-center justify-center">
-      
 
 
-      <div className="max-w-md w-full p-6 rounded-lg shadow-lg bg-white mt-4 py-4">
+    <div className="flex-col min-h-screen bg-bkg text-content flex items-center justify-center">
+
+      <div className="animate-pulse absolute top-34 left-24  md:w-[1100px] h-[700px] rounded-3xl bg-purple-300  mix-blend-multiply filter blur-xl opacity-70 "></div>
+      <div className="animate-pulse absolute right-24  md:w-[1100px] h-[700px] rounded-3xl bg-indigo-200  mix-blend-multiply filter blur-xl opacity-70"></div>
+
+
+
+      <div className="max-w-md w-full p-6 isolate rounded-lg shadow-lg bg-white mt-4 py-4">
         <div className="max-w-md w-full p-6 mt-4">
           <Player
             autoplay

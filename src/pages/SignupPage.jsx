@@ -45,8 +45,9 @@ export default function SignupPage() {
 
   return (
     <section className="bg-bkg text-content min-h-screen flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0">
-      <div className="animate-pulse absolute top-34 -left-4  md:w-[800px] h-[700px] bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 "></div>
-      <div className="animate-pulse absolute bottom-4 right-0 md:w-[800px] h-[700px] bg-indigo-300 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+
+<div className="animate-pulse absolute top-34 left-24  md:w-[1100px] h-[700px] rounded-3xl bg-purple-300  mix-blend-multiply filter blur-xl opacity-70 "></div>
+<div className="animate-pulse absolute right-24  md:w-[1100px] h-[700px] rounded-3xl bg-indigo-200  mix-blend-multiply filter blur-xl opacity-70"></div>
 
       <div className="relative isolate overflow-hidden bg-gray-900 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-40 lg:px-24 lg:pt-0 ">
         <svg
@@ -62,11 +63,12 @@ export default function SignupPage() {
             </radialGradient>
           </defs>
         </svg>
-        <div className="max-w-sm py-12 md:w-1/2 lg:w-1/3 mx-auto md:mx-0">
+        <div className="max-w-sm">
           <Player
             autoplay
             loop
             src="https://lottie.host/3f6e87fc-d23d-42ab-8459-2b52a26e700a/6PNWARPcNn.json"
+            style={{ height: '350px', width: '350px' }}
           >
             <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
           </Player>
