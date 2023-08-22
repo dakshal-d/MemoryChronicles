@@ -5,30 +5,13 @@ import Memoir from '../assets/Design (1).png'
 export default function Homepage() {
   return (
     <div className="bg-bkg text-content ">
-      <div className=" text-pink-500 font-bold text-lg p-3 py-4">
-      "Discover Your Story, Unfold Your Memories"
-      
+      <div className=" text-pink-500 font-bold text-lg mt-4">
+        "Discover Your Story, Unfold Your Memories"
+
       </div>
-
-      {/* <div className="md:text-3xl sm:text-3xl text-3xl font-bold justify-center text-gray-800">
-      Welcome to <span className='font-semibold text-pink-600'>MemoryChronicles </span>- Where Your Life's Journey Becomes a Timeless Tale.
-      </div> */}
-      {/* <div className='py-8 flex justify-center items-center'>
-
-        <Typed
-          className='text-pink-800 md:text-5xl sm:text-4xl text-xl font-bold md:pl-4 pl-2'
-          strings={['Capture', 'Relive','Preserve']}
-          typeSpeed={120} z
-          backSpeed={140}
-          loop
-        />
-      </div> */}
-
       <div className="mx-auto max-w-7xl py-12 sm:px-6 sm:py-12 lg:px-8 ">
-        
-
         <div className="relative isolate overflow-hidden bg-white px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
-          
+
           <svg
             viewBox="0 0 1024 1024"
             className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
@@ -66,12 +49,12 @@ export default function Homepage() {
               "Unleash the Art of Remembering: Experience<span className='font-semibold text-pink-600'> MemoryChronicles</span> - Your Intuitive Digital Companion for <span className='font-semibold text-pink-600'>Capturing, Reliving, Editing, and Erasing </span>the Beautiful Chapters of Your Life's Extraordinary Journey."
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-              <a
+              <button
                 href="/notes"
-                className="rounded-md bg-pink-200 px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-pink-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                className="rounded-md bg-pink-300 px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-pink-2 00 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Get started
-              </a>
+              </button>
 
 
             </div>
@@ -81,7 +64,6 @@ export default function Homepage() {
               className="absolute left-0 top-4 w-[31rem] max-w-none rounded-xl bg-white/5 ring-1 ring-white/10"
               src={Memoir}
               alt="App screenshot"
-
             />
           </div>
 
