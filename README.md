@@ -2,7 +2,7 @@
 
 <p>A MERN Stack project for storing day-to-day adventures of your life.</p>
 
-![MC1](https://github.com/dakshal-d/MemoryChronicles/assets/103371054/d5d4f53f-4d83-4a97-a99b-51a3a8e70729)
+![Screenshot 2023-08-22 115134](https://github.com/dakshal-d/MemoryChronicles/assets/103371054/37a76d40-f303-4a46-80b0-402679312d54)
 
 ![Screenshot 2023-08-15 233019](https://github.com/dakshal-d/MemoryChronicles/assets/103371054/126cf4c8-7777-4d5d-8182-e0dc2798fabf)
 
