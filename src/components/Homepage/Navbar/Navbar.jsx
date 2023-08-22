@@ -3,7 +3,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { LOGOUT } from '../../../Redux/users/user.types';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 //added nav
 const navigation = [
   { name: 'MemoryChronicles', href: '/', current: true },
@@ -24,7 +24,7 @@ export default function Navbar() {
     dispatch({ type: LOGOUT });
   };
   const {auth} = useSelector((state) => state.userReducer)
-  console.log(auth)
+  // console.log(auth)
   return (
     <Disclosure as="nav" className="bg-black text-pink-400">
       {({ open }) => (

@@ -1,5 +1,5 @@
 // import Typed from 'react-typed'
-import Memoir from '../assets/Memoir.png'
+import Memoir from '../assets/Design (1).png'
 
 
 export default function Homepage() {
@@ -78,11 +78,10 @@ export default function Homepage() {
           </div>
           <div className="relative mt-16 h-80 lg:mt-8">
             <img
-              className="absolute left-0 top-0 w-[57rem] max-w-none rounded-xl bg-white/5 ring-1 ring-white/10"
+              className="absolute left-0 top-4 w-[31rem] max-w-none rounded-xl bg-white/5 ring-1 ring-white/10"
               src={Memoir}
               alt="App screenshot"
-              width={1824}
-              height={1080}
+
             />
           </div>
 
@@ -95,7 +94,7 @@ export default function Homepage() {
 }
 
 
-{/* <Popover.Group className="hidden lg:flex lg:gap-x-12" />
+/* <Popover.Group className="hidden lg:flex lg:gap-x-12" />
 <Popover className="relative">
   <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-black">
 
@@ -141,4 +140,4 @@ export default function Homepage() {
 
           </Popover.Panel>
         </Transition>
-      </Popover> */}
+      </Popover> */
