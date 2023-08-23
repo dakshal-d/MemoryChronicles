@@ -114,10 +114,7 @@ export default function NotesPage() {
             </div>
           </div>
         )}
-      </>
-      
-      
-      
+      </>     
     </div>
   );
 }
