@@ -1,7 +1,7 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { LOGOUT } from '../../../Redux/users/user.types';
+import { LOGOUT } from '../../Redux/users/user.types';
 import { useDispatch, useSelector } from 'react-redux';
 // import { useNavigate } from 'react-router-dom';
 //added nav
@@ -18,7 +18,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Navbar() {
+const Navbar=()=> {
   const dispatch = useDispatch()
   const handleLogout = () => {
     dispatch({ type: LOGOUT });
@@ -135,3 +135,4 @@ export default function Navbar() {
     </Disclosure>
   )
 }
+export default Navbar
