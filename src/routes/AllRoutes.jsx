@@ -9,11 +9,11 @@ import ContactUs from "../pages/ContactUs";
 export default function AllRoutes(){
 
     return <Routes>
-        <Route path="/" element={<Homepage />}></Route>
-        <Route path="/register" element={<SignupPage />}></Route>
-        <Route path="/login" element={<LoginPage />}></Route>
-        <Route path="/contactus" element={<ContactUs />}></Route>
-        <Route path="/notes" element={<PrivateRoute><NotesPage /></PrivateRoute>}></Route>
+        <Route exact path="/" element={<Homepage />}></Route>
+        <Route exact path="/register" element={<SignupPage />}></Route>
+        <Route exact path="/login" element={<LoginPage />}></Route>
+        <Route exact path="/contactus" element={<ContactUs />}></Route>
+        <Route exact path="/notes" element={<PrivateRoute><NotesPage /></PrivateRoute>}></Route>
 
     </Routes>
 }
