@@ -71,7 +71,7 @@ export default function LoginPage() {
         </div>
 
         <div className="mt-4  text-sm text-white text-center md:text-left">
-          Don't have an account? <button className="text-red-600 font-semibold hover:underline hover:underline-offset-4 ml-1" href="/register">Register</button>
+          Don't have an account? <a className="text-red-600 font-semibold hover:underline hover:underline-offset-4 ml-1" href="/register">Register</a>
         </div>
       </div>
 
