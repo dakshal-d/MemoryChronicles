@@ -5,6 +5,7 @@ import NotesPage from "../pages/NotesPage";
 import SignupPage from "../pages/SignupPage";
 import PrivateRoute from "./PrivateRoute";
 import ContactUs from "../pages/ContactUs";
+import ErrorPage from "../pages/ErrorPage";
 
 export default function AllRoutes(){
 
@@ -14,6 +15,7 @@ export default function AllRoutes(){
         <Route exact path="/login" element={<LoginPage />}></Route>
         <Route exact path="/contactus" element={<ContactUs />}></Route>
         <Route exact path="/notes" element={<PrivateRoute><NotesPage /></PrivateRoute>}></Route>
+        <Route path="*" element={<ErrorPage/>}></Route>
 
     </Routes>
 }
