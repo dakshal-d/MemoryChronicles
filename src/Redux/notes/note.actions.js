@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useSelector } from "react-redux"
+// import { useSelector } from "react-redux"
 import { BASE_URL } from "../../constants/config"
 import { store } from "../store"
 import { LOGOUT } from "../users/user.types"
@@ -19,8 +19,9 @@ export const getNotes=()=>async(dispatch)=>{
             }
         })
 
-        const {status,message,data} = res.data
-        console.log(message)
+        const {status,data} = res.data
+        // const {status,message,data} = res.data
+        // console.log(message)
         if(status===1){
             
         dispatch({type:GET_NOTES_SUCCESS,payload:data})

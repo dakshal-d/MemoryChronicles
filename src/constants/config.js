@@ -1,1 +1,1 @@
-export const BASE_URL = "https://dark-erin-angelfish-kit.cyclic.cloud/"
+export const BASE_URL = "https://memorychronicles-backend.onrender.com/"

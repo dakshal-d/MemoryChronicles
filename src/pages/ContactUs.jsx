@@ -13,10 +13,10 @@ const ContactUs = () => {
 
     emailjs.sendForm('service_m2uv4y3', 'template_rbddve5', form.current, 'pU2Br9ZpJz-XjRLTv')
       .then((result) => {
-        console.log(result.text);
+        // console.log(result.text);
         toast.success('Message sent successfully');
       }, (error) => {
-        console.log(error.text);
+        // console.log(error.text);
         toast.error('Failed to send message');
       });
     form.current.reset();
