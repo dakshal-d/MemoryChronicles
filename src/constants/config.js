@@ -1,1 +1,1 @@
-export const BASE_URL = "https://memorychronicles-backend.onrender.com"
+export const BASE_URL = "http://memorychronicles.ap-south-1.elasticbeanstalk.com"
