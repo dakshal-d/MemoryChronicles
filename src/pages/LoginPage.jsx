@@ -8,7 +8,7 @@ import { Player, Controls } from '@lottiefiles/react-lottie-player';
 export default function LoginPage() {
   const nav = useNavigate()
   const { auth, token} = useSelector((state) => state.userReducer)
-  console.log(auth, token)
+  // console.log(auth, token)
   if (auth) {
     nav("/notes")
   }
