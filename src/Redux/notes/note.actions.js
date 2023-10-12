@@ -34,7 +34,6 @@ export const getNotes=()=>async(dispatch)=>{
 
     } catch (error) {
         dispatch({type:GET_NOTES_ERROR})
-
     }
 
 
